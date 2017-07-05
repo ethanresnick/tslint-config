@@ -1,6 +1,6 @@
 {
   "name": "@ethanresnick/tslint-config",
-  "version": "4.0.0",
+  "version": "5.5.0",
   "description": "My personal TSLint config. Focuses on catching errors, not bugging you about style.",
   "main": "tslint.json",
   "scripts": {
