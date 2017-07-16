@@ -63,7 +63,7 @@
     "no-sparse-arrays": true,
     "no-inferred-empty-object-type": true,
     "no-unbound-method": [true, "ignore-static"],
-    "no-this-reassignment": true,
+    "no-this-assignment": true,
 
     "completed-docs": [true, "functions"],
     "interface-name": [true, "never-prefix"],
