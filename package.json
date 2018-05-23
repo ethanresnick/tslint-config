@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ethanresnick/tslint-config/issues"
   },
-  "homepage": "https://github.com/ethanresnick/tslint-config#readme"
+  "homepage": "https://github.com/ethanresnick/tslint-config#readme",
+  "dependencies": {
+    "@ethanresnick/tslint-rules": "^1.0.0"
+  }
 }
