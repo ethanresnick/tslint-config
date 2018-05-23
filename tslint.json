@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:latest",
+  "extends": ["tslint:latest", "@ethanresnick/tslint-rules"],
   "rules": {
     "adjacent-overload-signatures": true,
     "no-empty-interface": true,
