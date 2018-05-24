@@ -1,8 +1,33 @@
 {
-  "extends": ["tslint:latest", "@ethanresnick/tslint-rules"],
+  "extends": ["tslint:latest", "@ethanresnick/tslint-rules", "tslint-sonarts"],
+  "rulesDirectory": ["vrsource-tslint-rules/rules"],
   "rules": {
+    // Custom rules
+
+    // from vrsource-tslint-rules
+    "prefer-literal": [true, "object", "array"],
+
+    // from sonar-ts, just customizing the built-in config we're extending,
+    // which already turns on a bunch of rules. I'm a bit worried about how long
+    // linting is beginning to take, so I may even turn off some rules that may
+    // be good ideas but seem really unlikely to be hit.
+    "cognitive-complexity": [true], // see https://www.sonarsource.com/docs/CognitiveComplexity.pdf
+    "max-union-size": [true, 3],
+    "no-big-function": [true, 125],
+    "no-commented-code": false,
+    "no-in-misuse": true,
+    "no-nested-incdec": true,
+    "no-redundant-parentheses": false,
+    "no-redundant-jump": true,
+    "no-return-type-any": false,
+    "no-same-line-conditional": true,
+    "no-undefined-argument": true,
+    "prefer-default-last": true,
+
+    // Standard TSlint Rules
     "adjacent-overload-signatures": true,
     "no-empty-interface": true,
+    "no-empty": [true, "allow-empty-functions"],
     "no-internal-module": true,
     "no-namespace": [true, "allow-declarations"],
     "no-var-requires": true,
@@ -69,6 +94,7 @@
     "no-duplicate-switch-case": true,
     "no-return-await": true,
     "no-dynamic-delete": true,
+    "prefer-while": true,
 
     "completed-docs": [true, "functions"],
     "interface-name": [true, "never-prefix"],
@@ -76,7 +102,7 @@
     "class-name": true,
     "jsdoc-format": [true, "check-multiline-start"],
     "new-parens": true,
-    "max-file-line-count": [true, 400],
+    "max-file-line-count": [true, 500],
     "no-trailing-whitespace": [true, "ignore-template-strings"],
     "no-unnecessary-initializer": true,
     "no-require-imports": false,
