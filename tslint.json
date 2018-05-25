@@ -1,6 +1,10 @@
 {
-  "extends": ["tslint:latest", "@ethanresnick/tslint-rules", "tslint-sonarts"],
-  "rulesDirectory": ["./node_modules/vrsource-tslint-rules/rules"],
+  "extends": [
+    "vrsource-tslint-rules",
+    "tslint-sonarts",
+    "tslint:latest",
+    "@ethanresnick/tslint-rules"
+  ],
   "rules": {
     // Custom rules
 
