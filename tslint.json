@@ -19,7 +19,6 @@
     "no-inner-html": true,
     "no-invalid-regexp": true,
     "no-octal-literal": true,
-    "no-reserved-keywords": true,
     "no-string-based-set-immediate": true,
     "no-string-based-set-interval": true,
     "no-string-based-set-timeout": true,
@@ -62,6 +61,7 @@
     "no-same-line-conditional": true,
     "no-undefined-argument": true,
     "prefer-default-last": true,
+    "no-useless-cast": false, // we have no-unnecessary-type-assertion already
 
     // Standard TSlint Rules
     "adjacent-overload-signatures": true,
@@ -94,7 +94,7 @@
     "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
     "use-isnan": true,
     "await-promise": true,
-    "variable-name": false, // see tslint-microsoft-contrib no-reserved-keywords
+    "variable-name": [true, "ban-keywords"],
     "only-arrow-functions": false,
     "cyclomatic-complexity": true,
     "return-undefined": true,
@@ -146,6 +146,7 @@
     "max-file-line-count": [true, 500],
     "no-trailing-whitespace": [true, "ignore-template-strings"],
     "no-unnecessary-initializer": true,
+    "no-unnecessary-type-assertion": true,
     "no-require-imports": false,
     "no-null-keyword": false,
     "no-unnecessary-qualifier": false,
