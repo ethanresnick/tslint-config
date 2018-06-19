@@ -1,8 +1,72 @@
 {
-  "extends": ["tslint:latest", "@ethanresnick/tslint-rules"],
+  "extends": ["tslint-sonarts", "tslint:latest", "@ethanresnick/tslint-rules"],
+  "rulesDirectory": ["vrsource-tslint-rules/rules", "tslint-microsoft-contrib"],
   "rules": {
+    // Custom rules
+
+    // from vrsource-tslint-rules
+    "prefer-literal": [true, "object", "array"],
+
+    // from tslint-microsoft-contrib
+    "chai-prefer-contains-to-index-of": true,
+    "chai-vague-errors": true,
+    "insecure-random": true,
+    "mocha-avoid-only": true,
+    "mocha-no-side-effect-code": true,
+    "no-control-regex": true,
+    "no-document-write": true,
+    "no-http-string": true,
+    "no-inner-html": true,
+    "no-invalid-regexp": true,
+    "no-octal-literal": true,
+    "no-string-based-set-immediate": true,
+    "no-string-based-set-interval": true,
+    "no-string-based-set-timeout": true,
+    "no-unnecessary-bind": true,
+    "no-unnecessary-field-initialization": true,
+    "no-unnecessary-local-variable": true,
+    "no-unnecessary-override": true,
+    "no-with-statement": true,
+    "non-literal-require": true,
+    "possible-timing-attack": true,
+    "promise-must-complete": true,
+    "react-a11y-event-has-role": true,
+    "react-a11y-image-button-has-alt": true,
+    "react-a11y-img-has-alt": true,
+    "react-a11y-props": true,
+    "react-a11y-proptypes": true,
+    "react-a11y-role-has-required-aria-props": true,
+    "react-a11y-role-supports-aria-props": true,
+    "react-a11y-role": true,
+    "react-a11y-tabindex-no-positive": true,
+    "react-anchor-blank-noopener": true,
+    "react-iframe-missing-sandbox": true,
+    "react-no-dangerous-html": true,
+    "react-this-binding-issue": true,
+
+
+    // from sonar-ts, just customizing the built-in config we're extending,
+    // which already turns on a bunch of rules. I'm a bit worried about how long
+    // linting is beginning to take, so I may even turn off some rules that may
+    // be good ideas but seem really unlikely to be hit.
+    "cognitive-complexity": [true], // see https://www.sonarsource.com/docs/CognitiveComplexity.pdf
+    "max-union-size": [true, 3],
+    "no-big-function": [true, 125],
+    "no-commented-code": false,
+    "no-in-misuse": true,
+    "no-nested-incdec": true,
+    "no-redundant-parentheses": false,
+    "no-redundant-jump": true,
+    "no-return-type-any": false,
+    "no-same-line-conditional": true,
+    "no-undefined-argument": true,
+    "prefer-default-last": true,
+    "no-useless-cast": false, // we have no-unnecessary-type-assertion already
+
+    // Standard TSlint Rules
     "adjacent-overload-signatures": true,
     "no-empty-interface": true,
+    "no-empty": [true, "allow-empty-functions"],
     "no-internal-module": true,
     "no-namespace": [true, "allow-declarations"],
     "no-var-requires": true,
@@ -10,6 +74,7 @@
     "no-reference": true,
     "no-non-null-assertion": true,
     "no-string-literal": true,
+    "no-floating-promises": true,
     "typedef": [true, "property-declaration", "member-variable-declaration"],
     "unified-signatures": false,
     "array-type": false,
@@ -38,6 +103,7 @@
     "prefer-object-spread": true,
     "prefer-conditional-expression": [true, "check-else-if"],
     "use-default-type-parameter": true,
+    "promise-function-async": true,
 
     "no-duplicate-variable": true,
     "no-var-keyword": true,
@@ -69,6 +135,7 @@
     "no-duplicate-switch-case": true,
     "no-return-await": true,
     "no-dynamic-delete": true,
+    "prefer-while": true,
 
     "completed-docs": [true, "functions"],
     "interface-name": [true, "never-prefix"],
@@ -76,9 +143,10 @@
     "class-name": true,
     "jsdoc-format": [true, "check-multiline-start"],
     "new-parens": true,
-    "max-file-line-count": [true, 400],
+    "max-file-line-count": [true, 500],
     "no-trailing-whitespace": [true, "ignore-template-strings"],
     "no-unnecessary-initializer": true,
+    "no-unnecessary-type-assertion": true,
     "no-require-imports": false,
     "no-null-keyword": false,
     "no-unnecessary-qualifier": false,
