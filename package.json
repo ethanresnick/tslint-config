@@ -18,8 +18,8 @@
   "homepage": "https://github.com/ethanresnick/tslint-config#readme",
   "dependencies": {
     "@ethanresnick/tslint-rules": "^1.0.0",
-    "tslint-microsoft-contrib": "^5.0.3",
-    "tslint-sonarts": "^1.6.0",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "tslint-sonarts": "^1.8.0",
     "vrsource-tslint-rules": "github:ethanresnick/vrsource-tslint-rules#patch-1"
   }
 }
