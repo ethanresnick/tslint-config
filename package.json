@@ -20,6 +20,6 @@
     "@ethanresnick/tslint-rules": "^1.0.0",
     "tslint-microsoft-contrib": "^5.2.1",
     "tslint-sonarts": "^1.8.0",
-    "vrsource-tslint-rules": "github:ethanresnick/vrsource-tslint-rules#patch-1"
+    "vrsource-tslint-rules": "6.0.0"
   }
 }
